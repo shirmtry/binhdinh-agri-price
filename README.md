@@ -48,7 +48,7 @@ venv/Scripts/python.exe api/index.py
 
 ## Deploy
 
-- Vercel: xem `deploy_url.txt` (cập nhật sau khi deploy).
+- Vercel: **https://binhdinh-agri-price.vercel.app** (xem `deploy_url.txt`)
 - GitHub: https://github.com/shirmtry/binhdinh-agri-price
 
 ## 📞 Liên hệ HTK – 0396241674 – 09/11/2026
