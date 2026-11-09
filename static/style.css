@@ -1,0 +1,124 @@
+/* Bảng giá nông sản Bình Định 2026 – HTK 0396241674 */
+:root {
+  --green: #1b7a3d;
+  --green-dark: #135c2d;
+  --amber: #b45309;
+  --red: #b91c1c;
+  --bg: #f4f8f4;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #5b6672;
+  --border: #dbe5db;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { color: var(--green-dark); }
+.container { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+/* Navbar */
+.navbar {
+  background: var(--green-dark);
+  color: #fff;
+  position: sticky; top: 0; z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.navbar .container {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px;
+}
+.brand { color: #fff; font-weight: 700; text-decoration: none; font-size: 1.05rem; }
+.brand small { display: block; font-weight: 400; font-size: .72rem; opacity: .85; }
+.nav-links { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.nav-links a {
+  color: #eaf5ec; text-decoration: none; padding: 6px 10px;
+  border-radius: 8px; font-size: .92rem;
+}
+.nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,.16); color: #fff; }
+.btn-hotline {
+  background: #f59e0b; color: #241a02 !important; font-weight: 700;
+  border-radius: 8px; padding: 6px 12px; white-space: nowrap;
+}
+.btn-hotline:hover { background: #fbbf24; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--green-dark), var(--green)); color: #fff; padding: 36px 0 30px; }
+.hero h1 { font-size: 1.7rem; margin-bottom: 10px; }
+.hero p { max-width: 860px; opacity: .95; }
+.hero .updated { margin-top: 12px; font-size: .85rem; background: rgba(255,255,255,.15); display: inline-block; padding: 4px 12px; border-radius: 999px; }
+
+main { padding: 24px 0 40px; }
+section { margin-bottom: 28px; }
+h2 { font-size: 1.25rem; color: var(--green-dark); margin-bottom: 12px; }
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+.note-badge {
+  display: inline-block; background: #fef3c7; color: #92400e;
+  border: 1px solid #fcd34d; border-radius: 999px;
+  padding: 4px 14px; font-size: .85rem; margin-bottom: 14px;
+}
+.grid { display: grid; gap: 14px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* Price cards */
+.price-card h3 { color: var(--green-dark); font-size: 1.05rem; }
+.price-value { font-size: 1.4rem; font-weight: 700; margin: 4px 0; }
+.price-unit { font-size: .8rem; color: var(--muted); font-weight: 400; }
+.change-up { color: var(--green); font-weight: 700; }
+.change-down { color: var(--red); font-weight: 700; }
+.change-flat { color: var(--muted); font-weight: 700; }
+.price-context { font-size: .84rem; color: var(--muted); margin-top: 6px; }
+
+/* Controls */
+.controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+.controls label { font-weight: 600; }
+select {
+  padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);
+  font-size: .95rem; background: #fff; min-width: 180px;
+}
+.chart-wrap { position: relative; height: 320px; }
+
+/* Table */
+table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: #eaf3ec; color: var(--green-dark); }
+tr:hover td { background: #f6faf6; }
+.table-scroll { overflow-x: auto; }
+
+.cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.btn {
+  display: inline-block; background: var(--green); color: #fff;
+  text-decoration: none; padding: 10px 18px; border-radius: 10px; font-weight: 600;
+}
+.btn:hover { background: var(--green-dark); }
+.btn-outline { background: #fff; color: var(--green-dark); border: 1px solid var(--green); }
+
+/* Footer */
+footer {
+  background: var(--green-dark); color: #e6f2e8;
+  padding: 22px 0; font-size: .9rem; margin-top: auto;
+}
+footer a { color: #ffd57a; }
+footer .container { display: flex; flex-direction: column; gap: 6px; }
+
+.alert-404 { text-align: center; padding: 60px 16px; }
+.alert-404 h1 { font-size: 3rem; color: var(--green-dark); }
+
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .hero h1 { font-size: 1.35rem; }
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .chart-wrap { height: 260px; }
+  .navbar .container { justify-content: center; }
+  .nav-links { justify-content: center; }
+}

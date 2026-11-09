@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="HTK">
+  <meta name="last-updated" content="2026-11-09">
+  <meta name="description" content="Bảng giá 10 loại nông sản Bình Định, biểu đồ xu hướng 30 ngày và so sánh giá theo 11 huyện. HTK 0396241674.">
+  <title>Bảng giá &amp; xu hướng nông sản – Bình Định 2026 – HTK</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="/">🌾 Giá nông sản Bình Định<small>Mùa mưa lũ 2026 · HTK</small></a>
+      <div class="nav-links">
+        <a href="/">Trang chủ</a>
+        <a href="/bang-gia" class="active">Bảng giá</a>
+        <a href="/about">Giới thiệu</a>
+        <a href="tel:0396241674" class="btn-hotline">📞 Liên hệ HTK</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2>💰 Giá hiện tại 10 loại nông sản (VNĐ/kg)</h2>
+      <span class="note-badge">Dữ liệu mô phỏng – cập nhật 09/11/2026</span>
+      <div class="grid grid-3" id="price-grid">
+        <p class="card">Đang tải dữ liệu giá…</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="controls">
+        <label for="product-select">Chọn loại nông sản:</label>
+        <select id="product-select" aria-label="Chọn loại nông sản xem xu hướng"></select>
+      </div>
+      <h2 id="trend-title">Xu hướng giá 30 ngày</h2>
+      <div class="chart-wrap"><canvas id="trend-chart" aria-label="Biểu đồ xu hướng giá 30 ngày"></canvas></div>
+    </section>
+
+    <section class="card">
+      <div class="controls">
+        <label for="district-product-select">So sánh theo huyện – chọn loại:</label>
+        <select id="district-product-select" aria-label="Chọn loại nông sản so sánh theo huyện"></select>
+      </div>
+      <h2 id="district-title">So sánh giá theo 11 huyện Bình Định</h2>
+      <div class="chart-wrap"><canvas id="district-chart" aria-label="Biểu đồ so sánh giá theo huyện"></canvas></div>
+      <div class="table-scroll" style="margin-top:14px">
+        <table>
+          <thead><tr><th>Huyện / Thị xã / Thành phố</th><th>Giá (VNĐ/kg)</th><th>So với giá tỉnh</th></tr></thead>
+          <tbody id="district-tbody"></tbody>
+        </table>
+      </div>
+      <p style="margin-top:10px;font-size:.85rem;color:#5b6672">
+        Miền núi (An Lão, Vĩnh Thạnh, Vân Canh) thường thấp hơn do đường sạt lở sau bão 2026,
+        thương lái trừ chi phí vận chuyển. Bà con nên gom hàng bán chung để có giá tốt hơn.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2026 <a href="https://zalo.me/0396241674" target="_blank" rel="noopener">HTK</a> · Hotline/Zalo: <a href="tel:0396241674">0396241674</a> · Email: <a href="mailto:htk.contact@gmail.com">htk.contact@gmail.com</a></div>
+      <div>Bảng giá nông sản Bình Định · Dữ liệu mô phỏng – cập nhật 09/11/2026</div>
+    </div>
+  </footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
